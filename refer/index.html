@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Únete a Xenify</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            max-width: 400px;
+            width: 100%;
+        }
+        .logo {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .download-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        .download-btn:hover {
+            transform: translateY(-2px);
+        }
+        .app-store {
+            background: #000;
+            color: white;
+        }
+        .google-play {
+            background: #01875f;
+            color: white;
+        }
+        .referral-code {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 2px dashed #667eea;
+        }
+        .code {
+            font-family: monospace;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">Xenify</div>
+        <h1>¡Te han invitado a Xenify! 🌟</h1>
+        <p>Tu compañero para una salud integral. Descarga la app y comienza tu viaje hacia el bienestar.</p>
+        
+        <div class="referral-code">
+            <p><strong>Código de invitación:</strong></p>
+            <div class="code" id="referralCode">Cargando...</div>
+        </div>
+        
+        <div class="download-buttons">
+        <a href="https://apps.apple.com/app/xenify" class="download-btn app-store" target="_blank">
+            📱 App Store
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.xenify.app" class="download-btn google-play" target="_blank">
+            🤖 Google Play
+        </a>
+        </div>
+        
+        <p style="margin-top: 30px; font-size: 0.9em; color: #999;">
+            Si ya tienes la app instalada, debería abrirse automáticamente. Si no, descárgala e ingresa el código manualmente.
+        </p>
+    </div>
+
+    <script>
+        // Obtener código de referencia de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const referralCode = urlParams.get('code');
+        
+        if (referralCode) {
+            document.getElementById('referralCode').textContent = referralCode;
+            
+            // Intentar abrir la app automáticamente
+            setTimeout(() => {
+                // Intentar con custom URL scheme
+                window.location.href = `xenify://refer?code=${referralCode}`;
+                
+                // Si no funciona, intentar con intent para Android
+                setTimeout(() => {
+                    window.location.href = `intent://refer?code=${referralCode}#Intent;scheme=xenify;package=com.xenify.app;end`;
+                }, 500);
+            }, 1000);
+        } else {
+            document.getElementById('referralCode').textContent = 'No disponible';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.xenify.app",
+    "sha256_cert_fingerprints": [
+      "B4:13:09:C2:1B:B8:BD:45:6C:8A:3B:CA:13:71:43:BC:83:76:32:8D:29:23:7F:39:95:41:37:51:F0:D5:DF:69"
+    ]
+  }
+}]

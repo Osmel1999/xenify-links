@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xenify - Tu Compañero de Salud Integral</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .logo {
+            font-size: 4em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        .subtitle {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        .feature {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .feature h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        .download-section {
+            margin-top: 50px;
+            padding: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        .download-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s;
+            font-size: 1.1em;
+        }
+        .download-btn:hover {
+            transform: translateY(-3px);
+        }
+        .app-store {
+            background: #000;
+            color: white;
+        }
+        .google-play {
+            background: #01875f;
+            color: white;
+        }
+        .footer {
+            margin-top: 60px;
+            opacity: 0.7;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">Xenify</div>
+        <h1>Tu Compañero de Salud Integral</h1>
+        <p class="subtitle">Monitorea tu bienestar, recibe recordatorios inteligentes y mejora tu calidad de vida día a día</p>
+        
+        <div class="features">
+            <div class="feature">
+                <h3>🏥 Seguimiento Médico</h3>
+                <p>Registra medicamentos, síntomas y citas médicas de forma sencilla</p>
+            </div>
+            <div class="feature">
+                <h3>🍽️ Nutrición Inteligente</h3>
+                <p>Monitorea tu alimentación e hidratación con recordatorios personalizados</p>
+            </div>
+            <div class="feature">
+                <h3>📱 Notificaciones Smart</h3>
+                <p>Recibe alertas inteligentes para medicamentos y rutinas de salud</p>
+            </div>
+            <div class="feature">
+                <h3>📊 Dashboard Completo</h3>
+                <p>Visualiza tu progreso y tendencias de salud en tiempo real</p>
+            </div>
+        </div>
+        
+        <div class="download-section">
+            <h2>Descarga Xenify</h2>
+            <p>Disponible para iOS y Android</p>
+            
+            <div class="download-buttons">
+                <a href="https://apps.apple.com/app/xenify" class="download-btn app-store" target="_blank">
+                    📱 Descargar para iOS
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.xenify.app" class="download-btn google-play" target="_blank">
+                    🤖 Descargar para Android
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2025 Xenify. Todos los derechos reservados.</p>
+            <p>Tu salud, nuestra prioridad 💚</p>
+        </div>
+    </div>
+</body>
+</html>
