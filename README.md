@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Xenify Links - GitHub Pages Setup
 
 Este repositorio contiene los archivos necesarios para que funcionen los App Links (Android) y Universal Links (iOS) de la aplicación Xenify.
@@ -75,3 +76,6 @@ No olvides actualizar el `referral_service.dart` con tu dominio real:
 static const String appDomain = 'tu-usuario.github.io';
 static const String referralPath = '/xenify-links/refer';
 ```
+=======
+# xenify-links
+>>>>>>> 42f46884c0c7f6d2a2d90ed252fdddbbfe604dc1
