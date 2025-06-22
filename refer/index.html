@@ -64,19 +64,7 @@
             background: #01875f;
             color: white;
         }
-        .referral-code {
-            background: #f0f0f0;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border: 2px dashed #667eea;
-        }
-        .code {
-            font-family: monospace;
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #667eea;
-        }
+
     </style>
 </head>
 <body>
@@ -84,11 +72,6 @@
         <div class="logo">Xenify</div>
         <h1>¡Te han invitado a Xenify! 🌟</h1>
         <p>Tu compañero para una salud integral. Descarga la app y comienza tu viaje hacia el bienestar.</p>
-        
-        <div class="referral-code">
-            <p><strong>Código de invitación:</strong></p>
-            <div class="code" id="referralCode">Cargando...</div>
-        </div>
         
         <div class="download-buttons">
         <a href="https://apps.apple.com/app/xenify" class="download-btn app-store" target="_blank">
@@ -100,7 +83,7 @@
         </div>
         
         <p style="margin-top: 30px; font-size: 0.9em; color: #999;">
-            Si ya tienes la app instalada, debería abrirse automáticamente. Si no, descárgala e ingresa el código manualmente.
+            Una vez descargada la app, podrás comenzar a disfrutar de todas las funcionalidades de Xenify.
         </p>
     </div>
 
@@ -110,8 +93,6 @@
         const referralCode = urlParams.get('code');
         
         if (referralCode) {
-            document.getElementById('referralCode').textContent = referralCode;
-            
             // Intentar abrir la app automáticamente
             setTimeout(() => {
                 // Intentar con custom URL scheme
@@ -122,8 +103,6 @@
                     window.location.href = `intent://refer?code=${referralCode}#Intent;scheme=xenify;package=com.xenify.app;end`;
                 }, 500);
             }, 1000);
-        } else {
-            document.getElementById('referralCode').textContent = 'No disponible';
         }
     </script>
 </body>
